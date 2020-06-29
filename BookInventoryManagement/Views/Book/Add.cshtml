@@ -1,0 +1,59 @@
+﻿@model BookInventoryManagement.Models.Book
+
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_PartialLayout.cshtml";
+}
+
+
+
+<h4>Book Fields</h4>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Add">
+            <div class="form-group row">
+                <label asp-for="title" class="col-sm-2 col-form-label">Title:</label>
+                <div class="col-sm-10">
+                    <input asp-for="title" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="author" class="col-sm-2 col-form-label">Author:</label>
+                <div class="col-sm-10">
+                    <input asp-for="author" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="isbn" class="col-sm-2 col-form-label">ISBN:</label>
+                <div class="col-sm-10">
+                    <input asp-for="isbn" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="publisher" class="col-sm-2 col-form-label">Publisher:</label>
+                <div class="col-sm-10">
+                    <input asp-for="publisher" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="year" class="col-sm-2 col-form-label">Year:</label>
+                <div class="col-sm-10">
+                    <input asp-for="year" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Do it" class="btn btn-light" />
+            </div>
+        </form>
+
+      
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>
+
+
+

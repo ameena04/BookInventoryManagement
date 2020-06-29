@@ -1,0 +1,17 @@
+﻿@model IEnumerable<BookInventoryManagement.Models.Book>
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_PartialLayout.cshtml";
+}
+
+<h4>Search Result</h4>
+<div class="container">
+
+    @foreach (var item in Model)
+    {
+        <h6 >@item.title</h6>
+        <a asp-controller="Book" asp-action="Details" asp-route-id="@item.bookId">Quick View</a>
+
+    }
+
+</div>
